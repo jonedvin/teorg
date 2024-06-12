@@ -5,7 +5,6 @@ import liff from "@line/liff";
 function MyApp({ Component, pageProps }) {
   const [liffObject, setLiffObject] = useState(null);
   const [liffError, setLiffError] = useState(null);
-  const [isLoading, setIsLoading] = useState(true);
 
   // Execute liff.init() when the app is initialized
   useEffect(() => {
@@ -15,8 +14,10 @@ function MyApp({ Component, pageProps }) {
       console.log("start liff.init()...");
       liff
         .init({ liffId: process.env.LIFF_ID })
-        .ready.then(() => {
+        .then(() => {
           console.log("liff.init() done");
+          console.log(liffObject.ready);
+          console.log(liffObject.getOS());
           setLiffObject(liff);
         })
         .catch((error) => {
