@@ -62,7 +62,10 @@ export default function Home(props) {
       <div className="home__buttons">
         <button
           onClick={() => {
-            console.log("getProfile:", liff.getProfile())
+            (async () => {
+              let profile = await liff.getProfile();
+              console.log("getProfile:", profile)
+            })();
           }}
           className="home__buttons__button button--secondary"
         >
