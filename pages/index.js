@@ -11,6 +11,10 @@ export default function Home(props) {
    **/
   const {liff, liffError} = props;
 
+  if (liff === null) {
+    return <div></div>
+  }
+
   return (
     <div>
       <Head>
