@@ -55,7 +55,29 @@ export default function Home(props) {
           }}
           className="home__buttons__button button--secondary"
         >
-          Button
+          getContext
+        </button>
+      </div>
+
+      <div className="home__buttons">
+        <button
+          onClick={() => {
+            console.log("getProfile:", liff.getProfile())
+          }}
+          className="home__buttons__button button--secondary"
+        >
+          getProfile
+        </button>
+      </div>
+
+      <div className="home__buttons">
+        <button
+          onClick={() => {
+            console.log("getIDToken:", liff.getIDToken())
+          }}
+          className="home__buttons__button button--secondary"
+        >
+          getIDToken
         </button>
       </div>
 
