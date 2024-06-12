@@ -43,20 +43,9 @@ export default function Home(props) {
             test:
           </span>
           <span className="home__badges__badge badge--secondary">
-            {liff.getIDToken()}
+            {liff.getOS()}
           </span>
         </div>
-      </div>
-
-      <div className="home__buttons">
-        <button
-          onClick={() => {
-            console.log("Button:", liff.getContext())
-          }}
-          className="home__buttons__button button--secondary"
-        >
-          getContext
-        </button>
       </div>
 
       <div className="home__buttons">
@@ -70,17 +59,6 @@ export default function Home(props) {
           className="home__buttons__button button--secondary"
         >
           getProfile
-        </button>
-      </div>
-
-      <div className="home__buttons">
-        <button
-          onClick={() => {
-            console.log("getIDToken:", liff.getIDToken())
-          }}
-          className="home__buttons__button button--secondary"
-        >
-          getIDToken
         </button>
       </div>
 
