@@ -8,26 +8,23 @@ function MyApp({ Component, pageProps }) {
 
   // Execute liff.init() when the app is initialized
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-
-      // Initialize LIFF
-      console.log("start liff.init()...");
-      liff
-        .init({ liffId: process.env.LIFF_ID })
-        .then(() => {
-          console.log("liff.init() done");
-          setLiffObject(liff);
-        })
-        .catch((error) => {
-          console.log(`liff.init() failed: ${error}`);
-          if (!process.env.LIFF_ID) {
-            console.info(
-              "LIFF Starter: Please make sure that you provided `LIFF_ID` as an environmental variable."
-            );
-          }
-          setLiffError(error.toString());
-        });
-    }
+    // Initialize LIFF
+    console.log("start liff.init()...");
+    liff
+      .init({ liffId: process.env.LIFF_ID })
+      .then(() => {
+        console.log("liff.init() done");
+        setLiffObject(liff);
+      })
+      .catch((error) => {
+        console.log(`liff.init() failed: ${error}`);
+        if (!process.env.LIFF_ID) {
+          console.info(
+            "LIFF Starter: Please make sure that you provided `LIFF_ID` as an environmental variable."
+          );
+        }
+        setLiffError(error.toString());
+      });
   }, []);
 
   // Provide `liff` object and `liffError` object
