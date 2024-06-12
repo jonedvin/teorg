@@ -1,6 +1,6 @@
 import Head from "next/head";
 import packageJson from "../package.json";
-import liff from "@line/liff";
+import { useEffect } from "react";
 
 export default function Home(props) {
   /** You can access to liff and liffError object through the props.
@@ -9,6 +9,8 @@ export default function Home(props) {
    *
    *  Learn more about LIFF API documentation (https://developers.line.biz/en/reference/liff)
    **/
+  const [liff, liffError] = props;
+
   return (
     <div>
       <Head>
