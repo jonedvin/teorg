@@ -24,7 +24,7 @@ export default function Home(props) {
   if (!liff.isLoggedIn()) {
     liff.login();
   }
-  console.log(liff.isLoggedIn())
+  console.log("isLoggedIn:", liff.isLoggedIn())
 
   return (
     <div>
@@ -51,14 +51,26 @@ export default function Home(props) {
       <div className="home__buttons">
         <button
           onClick={() => {
-            liff.logout();
-            window.location.reload();
+            console.log("Button:", liff.getContext())
           }}
           className="home__buttons__button button--secondary"
         >
           Button
         </button>
       </div>
+
+      <div className="home__buttons">
+        <button
+          onClick={() => {
+            liff.logout();
+            window.location.reload();
+          }}
+          className="home__buttons__button button--secondary"
+        >
+          Logout
+        </button>
+      </div>
+
     </div>
   );
 
