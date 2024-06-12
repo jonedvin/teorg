@@ -1,5 +1,6 @@
 import Head from "next/head";
 import packageJson from "../package.json";
+import liff from "@line/liff";
 
 export default function Home(props) {
   /** You can access to liff and liffError object through the props.
