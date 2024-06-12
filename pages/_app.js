@@ -16,8 +16,6 @@ function MyApp({ Component, pageProps }) {
         .init({ liffId: process.env.LIFF_ID })
         .then(() => {
           console.log("liff.init() done");
-          console.log(liff.ready);
-          console.log(liff.getOS());
           setLiffObject(liff);
         })
         .catch((error) => {
@@ -28,6 +26,11 @@ function MyApp({ Component, pageProps }) {
             );
           }
           setLiffError(error.toString());
+        })
+
+        liff.ready.then(() => {
+          console.log(liff.ready);
+          console.log(liff.getOS());
         })
     }
   }, []);
