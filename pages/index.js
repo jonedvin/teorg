@@ -15,6 +15,10 @@ export default function Home(props) {
     return (<div><h1>Nope.</h1></div>);
   }
 
+  if (!liff.isLoggedIn()) {
+    liff.login();
+  }
+
 
   (async () => {
     await liff.ready;
