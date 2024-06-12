@@ -16,6 +16,7 @@ function MyApp({ Component, pageProps }) {
         .init({ liffId: process.env.LIFF_ID })
         .then(() => {
           console.log("liff.init() done");
+          setLiffObject(liff);
         })
         .catch((error) => {
           console.log(`liff.init() failed: ${error}`);
@@ -27,8 +28,7 @@ function MyApp({ Component, pageProps }) {
           setLiffError(error.toString());
         })
 
-      liff.ready.then(() => {
-        setLiffObject(liff);
+      liffObject.ready.then(() => {
         console.log(liffObject.ready);
       })
     }
