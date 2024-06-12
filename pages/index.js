@@ -24,6 +24,7 @@ export default function Home(props) {
   if (!liff.isLoggedIn()) {
     liff.login();
   }
+  console.log(liff.isLoggedIn())
 
   return (
     <div>
