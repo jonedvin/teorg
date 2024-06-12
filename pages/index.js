@@ -15,15 +15,15 @@ export default function Home(props) {
     return (<div><h1>Nope.</h1></div>);
   }
 
-  if (!liff.isLoggedIn()) {
-    liff.login();
-  }
-
 
   (async () => {
     await liff.ready;
   })();
 
+
+  if (!liff.isLoggedIn()) {
+    liff.login();
+  }
 
   return (
     <div>
@@ -42,7 +42,7 @@ export default function Home(props) {
             test:
           </span>
           <span className="home__badges__badge badge--secondary">
-            {liff.getOS()}
+            {liff.getIDToken()}
           </span>
         </div>
       </div>
