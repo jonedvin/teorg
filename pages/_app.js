@@ -15,7 +15,7 @@ function MyApp({ Component, pageProps }) {
       console.log("start liff.init()...");
       liff
         .init({ liffId: process.env.LIFF_ID })
-        .then(() => {
+        .ready.then(() => {
           console.log("liff.init() done");
           setLiffObject(liff);
         })
@@ -28,9 +28,6 @@ function MyApp({ Component, pageProps }) {
           }
           setLiffError(error.toString());
         })
-        .finally(() => {
-          setIsLoading(false);
-        });
     }
   }, []);
 
@@ -38,13 +35,7 @@ function MyApp({ Component, pageProps }) {
   // to page component as property
   pageProps.liff = liffObject;
   pageProps.liffError = liffError;
-
-  // return <Component {...pageProps} />;
-  return isLoading ? (
-    <div>Loading...</div>
-  ) : (
-    <Component {...pageProps} />
-  );
+  return <Component {...pageProps} />;
 }
 
 export default MyApp;
