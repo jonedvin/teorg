@@ -47,6 +47,18 @@ export default function Home(props) {
           </span>
         </div>
       </div>
+
+      <div className="home__buttons">
+        <button
+          onClick={() => {
+            liff.logout();
+            window.location.reload();
+          }}
+          className="home__buttons__button button--secondary"
+        >
+          Button
+        </button>
+      </div>
     </div>
   );
 
