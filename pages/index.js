@@ -9,7 +9,7 @@ export default function Home(props) {
    *
    *  Learn more about LIFF API documentation (https://developers.line.biz/en/reference/liff)
    **/
-  const [liff, liffError] = props;
+  const {liff, liffError} = props;
 
   return (
     <div>
