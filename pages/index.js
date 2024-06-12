@@ -11,34 +11,150 @@ export default function Home(props) {
   return (
     <div>
       <Head>
-        <title>LIFF Starter</title>
+        <title>tØrg</title>
       </Head>
       <div className="home">
+
+        {/* Title */}
         <h1 className="home__title">
-          Welcome to <br />
-          <a
-            className="home__title__link"
-            href="https://developers.line.biz/en/docs/liff/overview/"
-          >
-            LIFF Starter!
-          </a>
+          Welcome to tØrg!
         </h1>
+
+        {/* Table */}
         <div className="home__badges">
           <span className="home__badges__badge badge--primary">
-            LIFF Starter
+            liff.getVersion()
           </span>
-          <span className="home__badges__badge badge--secondary">nextjs</span>
+          <span className="home__badges__badge badge--secondary">
+            {liff.getVersion()}
+          </span>
+        </div>
+
+        <div className="home__badges">
           <span className="home__badges__badge badge--primary">
-            {packageJson.version}
+            liff.getOS()
           </span>
-          <a
-            href="https://github.com/line/line-liff-v2-starter"
-            target="_blank"
-            rel="noreferrer"
-            className="home__badges__badge badge--secondary"
+          <span className="home__badges__badge badge--secondary">
+            {liff.getOS()}
+          </span>
+        </div>
+
+        <div className="home__badges">
+          <span className="home__badges__badge badge--primary">
+            liff.getLanguage()
+          </span>
+          <span className="home__badges__badge badge--secondary">
+            {liff.getLanguage()}
+          </span>
+        </div>
+
+        <div className="home__badges">
+          <span className="home__badges__badge badge--primary">
+            liff.getVersion()
+          </span>
+          <span className="home__badges__badge badge--secondary">
+            {liff.getVersion()}
+          </span>
+        </div>
+
+        <div className="home__badges">
+          <span className="home__badges__badge badge--primary">
+            liff.getLineVersion()
+          </span>
+          <span className="home__badges__badge badge--secondary">
+            {liff.getLineVersion()}
+          </span>
+        </div>
+
+        <div className="home__badges">
+          <span className="home__badges__badge badge--primary">
+            liff.isInClient()
+          </span>
+          <span className="home__badges__badge badge--secondary">
+            {liff.isInClient()}
+          </span>
+        </div>
+
+        <div className="home__badges">
+          <span className="home__badges__badge badge--primary">
+            liff.isLoggedIn()
+          </span>
+          <span className="home__badges__badge badge--secondary">
+            {liff.isLoggedIn()}
+          </span>
+        </div>
+
+        <div className="home__badges">
+          <span className="home__badges__badge badge--primary">
+            liff.isApiAvailable('shareTargetPicker')
+          </span>
+          <span className="home__badges__badge badge--secondary">
+            {liff.isApiAvailable('shareTargetPicker')}
+          </span>
+        </div>
+
+        <div className="home__badges">
+          <span className="home__badges__badge badge--primary">
+            liff.getAccessToken()
+          </span>
+          <span className="home__badges__badge badge--secondary">
+            {liff.getAccessToken()}
+          </span>
+        </div>
+
+        <div className="home__badges">
+          <span className="home__badges__badge badge--primary">
+            liff.getIDToken()
+          </span>
+          <span className="home__badges__badge badge--secondary">
+            {liff.getIDToken()}
+          </span>
+        </div>
+
+        <div className="home__badges">
+          <span className="home__badges__badge badge--primary">
+            liff.getDecodedIDToken()
+          </span>
+          <span className="home__badges__badge badge--secondary">
+            {liff.getDecodedIDToken()}
+          </span>
+        </div>
+
+        <div className="home__badges">
+          <span className="home__badges__badge badge--primary">
+            liff.getProfile()
+          </span>
+          <span className="home__badges__badge badge--secondary">
+            {liff.getProfile()}
+          </span>
+        </div>
+
+        <div className="home__badges">
+          <span className="home__badges__badge badge--primary">
+            liff.getFriendship()
+          </span>
+          <span className="home__badges__badge badge--secondary">
+            {liff.getFriendship()}
+          </span>
+        </div>
+
+        <div className="home__badges">
+          <span className="home__badges__badge badge--primary">
+            liff.getContext()
+          </span>
+          <span className="home__badges__badge badge--secondary">
+            {liff.getContext()}
+          </span>
+        </div>
+
+        {/* Buttons */}
+        <div className="home__buttons">
+          <button
+            onClick={() => liff.closeWindow()}
+            className="home__buttons__button button--secondary"
           >
-            GitHub
-          </a>
+            Close Window
+          </button>
         </div>
         <div className="home__buttons">
           <a
