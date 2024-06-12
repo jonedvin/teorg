@@ -15,6 +15,10 @@ export default function Home(props) {
     return <div></div>
   }
 
+  liff.ready.then(() => {
+    console.log(liff.ready);
+  })
+
   return (
     <div>
       <Head>

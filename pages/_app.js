@@ -27,10 +27,6 @@ function MyApp({ Component, pageProps }) {
           }
           setLiffError(error.toString());
         })
-
-      liffObject.ready.then(() => {
-        console.log(liffObject.ready);
-      })
     }
   }, []);
 
