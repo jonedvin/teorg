@@ -1,0 +1,62 @@
+
+.attendButton, .declineButton, .maybeButton {
+    width: 32.2%;
+    flex: 1;
+    margin: 5px 3px 5px 3px;
+    padding: 10px;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+    font-size: 1.5rem;
+    background-color: #eee;
+    cursor: pointer;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+
+}
+
+.attendButton:hover, .declineButton:hover, .maybeButton:hover {
+    background-color: #ddd;
+    border: 1px solid #ddd;
+}
+
+.attendButton:disabled, .declineButton:disabled, .maybeButton:disabled {
+    border: none;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+.attendButton {
+    color: #06c755;
+}
+
+.attendButton:disabled {
+    background-color: #06c755;
+}
+
+.maybeButton {
+    color: #f0c818;
+}
+
+.maybeButton:disabled {
+    background-color: #f0c818;
+}
+
+.declineButton {
+    color: #d9564a;
+}
+
+.declineButton:disabled {
+    background-color: #d9564a;
+}
+
+.countButton {
+    background-color: white;
+    border: 1px white;
+}
+
+.countButton:hover {
+    background-color: #eee;
+    border: 1px #eee;
+    border-radius: 5px;
+}

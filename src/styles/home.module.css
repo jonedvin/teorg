@@ -1,0 +1,55 @@
+
+/* Title */
+
+.title, .green_title {
+    margin: 0;
+    padding: 0;
+    line-height: 1; /* Make sure line height does not add extra space */
+}
+
+.green_title {
+    font-size: 6rem;
+    color: #06c755;
+}
+
+.title {
+    font-size: 5rem;
+}
+
+.button_group {
+  display: flex;
+  gap: 10px;
+}
+
+
+/* Event list */
+
+.event_container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.event_button {
+    background-color: #f9f9f9;
+    border: 1px solid #353a40;
+    border-radius: 4px;
+    padding: 16px;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.event_button:hover {
+    transform: scale(1.01);
+}
+
+.event_button h2 {
+    margin: 0 0 8px;
+}
+
+.event_button h3 {
+    margin: 0;
+}

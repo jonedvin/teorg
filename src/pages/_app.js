@@ -1,5 +1,19 @@
-import "@/styles/globals.css";
+import { useEffect } from 'react';
 
-export default function App({ Component, pageProps }) {
+import '../styles/globals.css';
+
+import { initializeLiff, forceLogin } from '../lib/liff';
+
+
+export default function MyApp({ Component, pageProps }) {
+
+  // Init LIFF and login
+  useEffect(() => {
+    (async () => {
+      await initializeLiff();
+      forceLogin();
+    })();
+  }, []);
+
   return <Component {...pageProps} />;
 }
