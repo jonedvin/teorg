@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
-import styles from '../../styles/new_event.module.css';
-import Layout from '../../components/layout.js';
+import styles from '@/styles/new_event.module.css';
+import Layout from '@/components/layout.js';
 
 import { FaUserGroup, FaT, FaCalendarDay, FaLocationDot, FaAlignJustify, FaRegCircle, FaRegCircleUser } from "react-icons/fa6";
 
-import LoadingScreen from '../../components/LoadingScreen';
+import LoadingScreen from '@/components/LoadingScreen';
 import { getProfile } from '@/lib/liff.js';
 import { addEvent } from '@/lib/vercel_sql/events';
 import { getGroupsForUser } from '@/lib/vercel_sql/groups';

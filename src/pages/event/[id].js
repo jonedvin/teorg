@@ -1,14 +1,14 @@
 import { useEffect, useState } from 'react';
 
-import styles from '../../styles/event.module.css';
-import Layout from '../../components/layout.js';
+import styles from '@/styles/event.module.css';
+import Layout from '@/components/layout.js';
 
-import LoadingScreen from '../../components/LoadingScreen';
-import { getEventById } from '../../lib/vercel_sql/events';
-import { getAttendance } from '../../lib/vercel_sql/attending_event'
-import AttendanceBlock from '../../components/AttendanceBlock.js';
-import { DatetimeLine, LocationLine, MaxSpotsLine, MaxMenLine } from '../../components/EventInfo.js';
-import { AttendanceModal, TabWidget, AttendeesList } from '../../components/AttendanceModal.js'
+import LoadingScreen from '@/components/LoadingScreen';
+import { getEventById } from '@/lib/vercel_sql/events';
+import { getAttendance } from '@/lib/vercel_sql/attending_event'
+import AttendanceBlock from '@/components/AttendanceBlock.js';
+import { DatetimeLine, LocationLine, MaxSpotsLine, MaxMenLine } from '@/components/EventInfo.js';
+import { AttendanceModal, TabWidget, AttendeesList } from '@/components/AttendanceModal.js'
 
 
 export default function Event({ event, attendance, attendanceCounts }) {
