@@ -1,12 +1,18 @@
 import { sql } from "@vercel/postgres";
 
+import { getDatetimeDate, getDatetimeTime } from '@/lib/time';
 
-export async function addEvent({ groupId, name, date, time, location, description, maxSpots, maxMen }) {
+
+export async function addEvent({ groupId, name, datetime, location, description, maxSpots, maxMen }) {
+  const date = getDatetimeDate(datetime);
+  const time = getDatetimeTime(datetime);
+
   result = await sql`
-    INSERT INTO events (group_id, name, date, time, location, description, max_spots, max_men)
-    VALUES (${groupId}, '${name}', ${date}, ${time}, '${location}', '${description}', ${maxSpots}, ${maxMen});
+      INSERT INTO events (group_id, name, date, time, location, description, max_spots, max_men)
+      VALUES (${groupId}, '${name}', ${date}, ${time}, '${location}', '${description}', ${maxSpots}, ${maxMen});
   `;
   console.log(`added event ${groupId}, '${name}', ${date}, ${time}, '${location}', '${description}', ${maxSpots}, ${maxMen}:`, result)
+  return result;
 }
 
 export async function deleteEvent({ id }) {

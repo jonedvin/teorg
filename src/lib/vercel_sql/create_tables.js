@@ -129,5 +129,5 @@ NOTES:
 - Events are based on a group, but others may be invited separately
 
 ENUMS:
-attending_event.attending: [attend, maybe, decline]
+attending_event.attending: [attend, maybe, decline], null means unanswered
 */

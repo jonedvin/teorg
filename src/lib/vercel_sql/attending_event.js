@@ -1,4 +1,5 @@
 import { sql } from "@vercel/postgres";
+import { getDatetimeDate, getDatetimeTime } from "../time";
 
 function getAttendingValue({attending}) {
   switch(attending) {
@@ -16,20 +17,6 @@ function getAttendingValue({attending}) {
   }
 }
 
-function getSignupDate({datetime}) {
-  const year = datetime.getFullYear();
-  const month = String(datetime.getMonth() + 1).padStart(2, '0');
-  const day = String(datetime.getDate()).padStart(2, '0');
-  return `${year}-${month}-${day}`;
-}
-
-function getSignupTime({datetime}) {
-  const hours = String(datetime.getHours()).padStart(2, '0');
-  const minutes = String(datetime.getMinutes()).padStart(2, '0');
-  const seconds = String(datetime.getSeconds()).padStart(2, '0');
-  return `${hours}:${minutes}:${seconds}`;
-}
-
 
 
 export async function inviteToEvent({ eventId, userId }) {
@@ -41,8 +28,8 @@ export async function inviteToEvent({ eventId, userId }) {
 }
 
 export async function editAttendingEvent({ eventId, userId, attending, datetime }) {
-  const signupDate = getSignupDate(datetime);
-  const signupTime = getSignupTime(datetime);
+  const signupDate = getDatetimeDate(datetime);
+  const signupTime = getDatetimeTime(datetime);
 
   result = await sql`
     UPDATE attending_event

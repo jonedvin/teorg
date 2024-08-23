@@ -57,7 +57,7 @@ export default function Event({ event, attendance, attendanceCounts }) {
             )}
 
             {/* Event name */}
-            <h1 className={styles.event_name}>{event.name}</h1>
+            <h1 className={styles.title}>{event.name}</h1>
 
             {/* Basic info */}
             <DatetimeLine datetime={event.datetime} />

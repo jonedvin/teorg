@@ -37,13 +37,8 @@ export default function EventsList( {events, handleNavigate} ) {
 
 
 function EventButton({ event, handleNavigate }) {
-
-    const handleClick = async () => {
-        handleNavigate(`/event/${event.id}`);
-    };
-
     return (
-        <button className={styles.event_button} onClick={handleClick}>
+        <button className={styles.event_button} onClick={() => handleNavigate(`/event/${event.id}`)}>
             <h4 style={{ margin: '0 0 10px 0' }}>{event.groupName}</h4>
             <h2>{event.name}</h2>
             <h3>{prettifyTime(event.datetime)}</h3>

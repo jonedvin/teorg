@@ -55,7 +55,7 @@ export default function Home({ profile, events }) {
         {/* New event and time select */}
         <div className="horizonal_container_wide">
           <div className={styles.button_group}>
-            <button>New Event</button>
+            <button onClick={() => handleNavigate(`/event/new`)}>New Event</button>
             <button>My groups</button>
           </div>
           <select name="time_period" id="time_period" onChange={handleTimePeriodChange}>
