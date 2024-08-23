@@ -7,6 +7,16 @@
   box-sizing: border-box; /* ensures padding and border are included in the element's total width */
 }
 
+.torg_button {
+  background-color: white;
+  color: #06c755;
+  border: none;
+  font-size: 6rem;
+  font-weight: bold;
+  padding: 0 0 30px;
+  cursor: pointer;
+}
+
 .horizonal_container_wide, .horizonal_container_left {
     display: flex;
     align-items: center;
@@ -18,13 +28,6 @@
 
 .horizonal_container_left {
   text-align: left;
-}
-
-.torg {
-  margin: 0;
-  padding: 0 0 30px;
-  font-size: 6rem;
-  color: #06c755;
 }
 
 
