@@ -11,7 +11,7 @@ export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     (async () => {
       await initializeLiff();
-      forceLogin();
+      // forceLogin();
     })();
   }, []);
 
