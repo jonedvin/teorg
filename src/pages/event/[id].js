@@ -48,10 +48,10 @@ export default function Event({ event, attendance, attendanceCounts }) {
             {attendance && (
                 <AttendanceModal isOpen={isModalOpen} onClose={closeAttendanceModal}>
                     <TabWidget contents={[
-                        <AttendeesList attendance={attendance} keyword='attend' />,
-                        <AttendeesList attendance={attendance} keyword='maybe' />,
-                        <AttendeesList attendance={attendance} keyword={null} />,
-                        <AttendeesList attendance={attendance} keyword='decline' />,
+                        <AttendeesList key="attend" attendance={attendance} keyword='attend' />,
+                        <AttendeesList key="maybe" attendance={attendance} keyword='maybe' />,
+                        <AttendeesList key="null" attendance={attendance} keyword={null} />,
+                        <AttendeesList key="decline" attendance={attendance} keyword='decline' />,
                     ]} />
                 </AttendanceModal>
             )}

@@ -14,7 +14,7 @@ import { getEventsForUser } from '../lib/vercel_sql/events.js';
 export default function Home({ profile, events }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
-  const [timePeriod, setTimePeriod] = useState('upcoming');
+  const [timePeriod, setTimePeriod] = useState('previous');
 
   // Ensure LoadingScreen is visible during navigation
   const handleNavigate = (url) => {
@@ -59,8 +59,8 @@ export default function Home({ profile, events }) {
             <button className='small_button' onClick={() => handleNavigate(`/groups`)}>My groups</button>
           </div>
           <select name="time_period" id="time_period" onChange={handleTimePeriodChange}>
-            <option value="upcoming">Upcoming</option>
             <option value="previous">Previous</option>
+            <option value="upcoming">Upcoming</option>
           </select>
         </div>
 
@@ -68,8 +68,8 @@ export default function Home({ profile, events }) {
         <EventsList events={filteredEvents} handleNavigate={handleNavigate}></EventsList>
 
         {/* Profile */}
-        <h2>getProfile:</h2>
-        <pre>{JSON.stringify(profile, null, 2)}</pre>
+        {/* <h2>getProfile:</h2>
+        <pre>{JSON.stringify(profile, null, 2)}</pre> */}
 
       </Layout>
 

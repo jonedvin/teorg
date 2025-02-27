@@ -36,15 +36,15 @@ export function forceLogin() {
 
 export async function getProfile() {
     try {
-        if (process.env.IS_PRODUCTION == "true") {
-            return await liff.getProfile();
-        } else {
+        // if (process.env.IS_PRODUCTION == "true") {
+        //     return await liff.getProfile();
+        // } else {
             return {
                 "userId": "Uc9bc1b1029de31374527b0df38084077",
                 "displayName": "助音 (ジョン)",
                 "pictureUrl": "https://profile.line-scdn.net/0hLpvyGVYZE19bAANu_CZtICtQEDV4cUpNIzVfPjsASWtlZVAAcTVUOz5VT2xjMgZaJ2BfbDwFGWhXE2Q5RVbva1wwTm5nNFALf2ZZvw"
             }
-        }
+        // }
     } catch (error) {
         console.error('Error fetching profile:', error);
     }

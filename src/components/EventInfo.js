@@ -51,7 +51,7 @@ export function MaxMenLine( {current, max} ) {
             <div className="horizonal_container_left">
                 <FaRegCircleUser style={{ color: '#06c755', fontSize: '24px', padding: '0 10px 0 0' }}/>
                 <p style={{margin: '0', padding: '5px', fontSize: '1rem'}}>
-                    {current}/{max} men's spots taken
+                    {current}/{max} {"men's spots taken"}
                 </p>
             </div>
         </button>
